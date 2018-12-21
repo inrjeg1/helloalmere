@@ -1,0 +1,60 @@
+<!-- Header Start -->
+<header  [ngClass]="{'header-dark fixed-top':true, 'shrink':!home}">
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-3 navbar-header">
+              <a class="navbar-brand page-scroll" href="#">
+                  <img src="../../../../assets/images/logo-text-black.png" alt="" class="logo-text-dark">
+                  <img src="../../../../assets/images/logo-text-light.png" alt="" class="logo-text-light">
+              </a>
+              
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-header" aria-controls="navbar-header" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+          </div>
+          <!-- //.col-lg-3 -->
+          
+          <div class="col-lg-9 navbar-wrapper justify-content-end">
+              <div id="navigation" class="navbar navbar-expand-lg">
+                  <div class="collapse navbar-collapse" id="navbar-header">
+                      <ul class="navbar-nav">
+                          <li class="nav-item">
+                              <a class="nav-link page-scroll"  [routerLink]="['../home']" routerLinkActive="active" >Home</a>
+                          </li>
+                          
+                          <li class="nav-item">
+                              <a class="nav-link page-scroll" [routerLink]="['../bootcamp']" routerLinkActive="active">Bootcamp</a>
+                          </li>
+
+                          <li class="nav-item">
+                            <a class="nav-link page-scroll" [routerLink]="['../sports']" routerLinkActive="active">Sports</a>
+                        </li>
+
+                          <li class="nav-item">
+                              <a class="nav-link page-scroll" [routerLink]="['../gallery']" routerLinkActive="active">Gallery</a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link page-scroll" [routerLink]="['../team']" routerLinkActive="active">The Team</a>
+                          </li>
+
+                          <li class="nav-item">
+                            <a class="nav-link page-scroll" [routerLink]="['../news']" routerLinkActive="active">News</a>
+                        </li>
+                          
+                          <li class="nav-item">
+                              <a class="nav-link page-scroll" [routerLink]="['../contact']" routerLinkActive="active">Contact</a>
+                          </li>
+                      </ul>
+                  </div>
+                  <!-- //.navbar-collapse -->
+              </div>
+              <!-- //.navbar -->
+          </div>
+          <!-- //.col-lg-9 -->
+      </div>
+      <!-- //.row -->
+  </div>
+  <!-- //.container -->
+</header>
+<!-- //Header End -->
+
