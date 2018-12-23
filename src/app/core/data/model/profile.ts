@@ -8,7 +8,7 @@ export class Profile {
   public email: String;
   public phone_number: String;
   public category: Category = new Category();
-  public proficiency: Proficiency = new Proficiency();
+  public proficiency: String;
   constructor(values: Object = {}) {
     Object.assign(this, values);
   }

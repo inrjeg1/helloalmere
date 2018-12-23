@@ -8,75 +8,75 @@
     <img src="../../assets/images/flyer.png">
 </div>
 
-<div class="col">
-<h2 class=" text-uppercase text-white">Badminton Registration</h2>
+<div class="col bg-white">
+<h2 class="text-uppercase">Badminton Registration</h2>
 <form name="registerForm" (ngSubmit)="registerForm.form.valid && onSubmit()" #registerForm="ngForm" class="offset-large" novalidate>
     <div class="form-group">
-      <label for ="first_name" class="font-alt letter-spacing-1 text-medium text-uppercase text-white">First Name</label>
+      <label for ="first_name" class="font-alt letter-spacing-1 text-medium font-weight-bold">First Name</label>
       <input type="text" class="form-control" id="first_name" name="first_name" [(ngModel)]= "model.first_name" #first_name="ngModel" placeholder="First name" [ngClass]="{'invalid':registerForm.submitted && first_name.invalid}" required/>
       <span *ngIf="registerForm.hasError('required','first_name') && registerForm.submitted" class="text-red">First Name is required</span>
     </div>
     <div class="form-group">
-      <label for="last_name" class="font-alt letter-spacing-1 text-medium text-uppercase text-white">Last Name</label>
+      <label for="last_name" class="font-alt letter-spacing-1 text-medium font-weight-bold">Last Name</label>
         <input type="text" class="form-control" id="last_name" name="last_name" [(ngModel)]= "model.last_name" #last_name="ngModel" placeholder="Last name" [ngClass]="{'invalid':registerForm.submitted && last_name.invalid}" required/>
         <span *ngIf="registerForm.hasError('required','last_name') && registerForm.submitted" class="text-red">Last name is required</span>
       </div>
 
       <div class="form-group">
-        <label for="email" class="font-alt letter-spacing-1 text-medium text-uppercase text-white">Email</label>
+        <label for="email" class="font-alt letter-spacing-1 text-medium font-weight-bold">Email</label>
         <input type="text" class="form-control" id="email" name="email" [(ngModel)]="model.email" #email="ngModel" placeholder="Email address" [ngClass]="{'invalid': registerForm.submitted && email.invalid}" required email/>
         <span *ngIf="registerForm.hasError('required','email') && registerForm.submitted" class="text-red">Email is required</span>
         <span *ngIf="registerForm.hasError('email','email') && registerForm.submitted" class="text-red">Please fill in a correct email adress</span>
       </div>
 
     <div class="form-group">
-      <label for="phone" class="font-alt letter-spacing-1 text-medium text-uppercase text-white">Phone</label>
+      <label for="phone" class="font-alt letter-spacing-1 text-medium font-weight-bold">Phone</label>
       <input type="text" class="form-control" name="phone_number" [(ngModel)]= "model.phone_number" #phone_number="ngModel" placeholder="Mobile" [ngClass]="{'invalid':registerForm.submitted && phone_number.invalid}" required/>
       <span *ngIf="registerForm.hasError('required','phone_number') && registerForm.submitted" class="text-red">Phone number is required</span>
     </div>
 
            
     <div class="form-group">
-        <span class="d-block font-alt letter-spacing-1 text-medium text-uppercase text-white">Category</span>
+        <span class="d-block font-alt letter-spacing-1 text-medium font-weight-bold">Category</span>
         <div class="form-check">
             <input type="checkbox" class="form-check-input" name="category" [(ngModel)]="model.category.single" #category="ngModel" id="single">
-            <label class="form-check-label text-white" for="single">Single</label>
+            <label class="form-check-label" for="single">Single</label>
           </div>
 
           <div class="form-check">
             <input type="checkbox" class="form-check-input" name="category" [(ngModel)]="model.category.doubles" #category="ngModel" id="doubles">
-            <label class="form-check-label text-white" for="doubles">Doubles</label>
+            <label class="form-check-label" for="doubles">Doubles</label>
           </div>
 
           <div class="form-check">
             <input type="checkbox" class="form-check-input" name="category" [(ngModel)]="model.category.mixed_doubles" #category="ngModel" id="mixeddoubles">
-            <label class="form-check-label text-white" for="mixeddoubles">Mixed Doubles</label>
+            <label class="form-check-label" for="mixeddoubles">Mixed Doubles</label>
           </div>        
         
     </div>
     <div class="form-group">
-        <span class="d-block font-alt letter-spacing-1 text-medium text-uppercase text-white">Level of proficiency</span>
+        <span class="d-block font-alt letter-spacing-1 text-medium font-weight-bold">Level of proficiency</span>
         <div class="form-check">
-            <input type="checkbox" class="form-check-input" name="proficiency" [(ngModel)]="model.proficiency.beginner" #proficiency="ngModel" id="beginner">
-            <label class="form-check-label text-white" for="beginner">Beginner</label>
+            <input type="radio" class="form-check-input" name="proficiency" [(ngModel)]="model.proficiency" value="beginner" #proficiency="ngModel" id="beginner">
+            <label class="form-check-label" for="beginner">Beginner</label>
           </div>
 
           <div class="form-check">
-            <input type="checkbox" class="form-check-input" name="proficiency" [(ngModel)]="model.proficiency.intermediate" #proficiency="ngModel" id="intermediate">
-            <label class="form-check-label text-white" for="intermediate">Intermediate</label>
+            <input type="radio" class="form-check-input" name="proficiency" [(ngModel)]="model.proficiency" value="intermediate" #proficiency="ngModel" id="intermediate">
+            <label class="form-check-label" for="intermediate">Intermediate</label>
           </div>
 
           <div class="form-check">
-            <input type="checkbox" class="form-check-input" name="proficiency" [(ngModel)]="model.proficiency.advanced" #proficiency="ngModel" id="advanced">
-            <label class="form-check-label text-white" for="advanced">Advanced</label>
-          </div>        
+            <input type="radio" class="form-check-input" name="proficiency" [(ngModel)]="model.proficiency" value="advanced" #proficiency="ngModel" id="advanced">
+            <label class="form-check-label" for="advanced">Advanced</label>
+          </div>   
         
     </div>    
        
-    <span class="d-block font-alt letter-spacing-1 text-small text-uppercase text-white">*Please complete all fields correctly</span>
+    
     
      
-      <button type="submit" class="btn btn-primary">Register</button>
+      <button type="submit" class="btn btn-success">Register</button>
     </form>
 
 </div>
