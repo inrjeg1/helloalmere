@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   envName: 'dev',
-  registerEndpointUrl: 'http://localhost:3002'
+  registerEndpointUrl: 'http://www.helloalmere.com:3002'
 };
 
 /*
